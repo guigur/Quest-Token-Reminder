@@ -9,7 +9,7 @@ settings = ""
 with open('settings.json') as json_file:
     settings = json.load(json_file)
 
-web_client = slack.WebClient(settings['tocken'])
+web_client = slack.WebClient(settings['token'])
 
 today = datetime.date.today()
 print("Today's date:", today)
