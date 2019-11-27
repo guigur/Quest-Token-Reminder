@@ -1,4 +1,4 @@
-# Quest-Tocken-Reminder
+# Quest-Token-Reminder
 
 1. Create a slack app
 1. Retrieve your token
