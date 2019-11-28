@@ -1,3 +1,5 @@
+#!/usr/local/bin/python3.6
+
 import time
 import re
 import slack
@@ -6,7 +8,7 @@ import json
 
 message = ""
 settings = ""
-with open('settings.json') as json_file:
+with open('settings.json', encoding='utf-8') as json_file:
     settings = json.load(json_file)
 
 web_client = slack.WebClient(settings['token'])
@@ -15,7 +17,7 @@ today = datetime.date.today()
 print("Today's date:", today)
 format_str = '%d-%m-%Y'
 
-with open('codes.json') as json_file:
+with open('codes.json', encoding='utf-8') as json_file:
     data = json.load(json_file)
     for entry in data['quest']:
         dateStart  = datetime.datetime.strptime(entry['start'], format_str).date()
